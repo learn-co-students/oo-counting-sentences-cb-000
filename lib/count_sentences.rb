@@ -24,9 +24,11 @@ class String
   # returns zero if there are no sentences in a string
   # returns the number of sentences in a complex string
   def count_sentences
+    self.split(/\.|\?|\!/).count{|x| x != ""}
+
     # 1. split the string at all punctuation marks (.?!)
-    string_array = self.split(/\.|\?|\!/)
+      # string_array = self.split(/\.|\?|\!/)
     # 2. count the number of elements after the split
-    string_array.count{|x| x != ""}
+      # string_array.count{|x| x != ""}
   end
 end
