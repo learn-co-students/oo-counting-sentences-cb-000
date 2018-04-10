@@ -32,7 +32,7 @@ class String
     new_str = self.split
     new_str.each do |str|
     if str.end_with?(".")   || str.end_with?("?") || str.end_with?("!")
-      count +=1
+      count += 1
     end
     end
     count
