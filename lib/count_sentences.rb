@@ -15,10 +15,7 @@ class String
   end
 
   def count_sentences
-    sentences = []
-    self.split(/[?!.]/).each do |sentence|
-      sentences << sentence unless sentence == ""
-    end
+    sentences = self.split(/[?!.]/).delete_if{ |sentence| sentence == "" }
     sentences.count
   end
 end
